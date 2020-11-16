@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"	"runtime"
+	"fmt"
+	"runtime"
 	"sync"
+	"time"
 )
-
 
 func main() {
 
@@ -35,11 +36,11 @@ func test2() {
 }
 
 func test3() {
-	vs := []int{1,2,3,4}
+	vs := []int{1, 2, 3, 4}
 	for _, v := range vs {
 		go func() {
 			fmt.Println(v)
 		}()
 	}
-	time.Sleep(1 *time.Second)
+	time.Sleep(1 * time.Second)
 }
