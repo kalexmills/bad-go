@@ -5,10 +5,15 @@ import (
 	"runtime"
 	"sync"
 	"time"
+
+	"github.com/google/go-github/github"
 )
 
 func main() {
-
+	var x github.Client
+	if x == nil {
+		fmt.Println("do nothing")
+	}
 }
 
 func test1() {
