@@ -5,14 +5,19 @@ import (
 	"runtime"
 	"sync"
 	"time"
-
-	"github.com/google/go-github/github"
 )
 
 func main() {
-	var x github.Client
-	if x == nil {
-		fmt.Println("do nothing")
+}
+
+func test_looppointer() {
+	print := func(i *int) {
+		fmt.Printf("%d\n", *i)
+	}
+	for _, r := range []int{1, 2, 3, 4, 5} {
+		x := &r
+		print(&r)
+		print(x)
 	}
 }
 
