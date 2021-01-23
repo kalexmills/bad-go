@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	var x github.Client
+	var x *github.Client
 	if x == nil {
 		fmt.Println("do nothing")
 	}
